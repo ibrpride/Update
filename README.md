@@ -75,5 +75,5 @@ It includes various system performance improvements, privacy settings adjustment
 1. Clone the repository or download the script file.
 2. Run the script using PowerShell:
 ```
-iwr -useb https://ibrpride.com/win | iex
+iwr -useb https://ibrpride.com/wintools | iex
 ```
