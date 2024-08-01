@@ -203,6 +203,80 @@ for ($progress = 0; $progress -le 100; $progress++) {
     } elseif ($progress -le 16) {
         $statusMessage = $updateMessages[3]
         Start-Sleep -Milliseconds 10
+	# Remove Mouse and Sound Schemes
+	Reg.exe add 'HKCU\AppEvents\Schemes' /ve /t REG_SZ /d '.None' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\.Default\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\.Default\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\CriticalBatteryAlarm\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceConnect\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceDisconnect\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceFail\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\DeviceFail\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\FaxBeep\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\FaxBeep\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\LowBatteryAlarm\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\LowBatteryAlarm\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\MailBeep\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\MailBeep\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\MessageNudge\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\MessageNudge\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Default\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Default\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.IM\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.IM\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Mail\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Mail\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Proximity\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Proximity\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Reminder\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.Reminder\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.SMS\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\Notification.SMS\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\ProximityConnection\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\ProximityConnection\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\SystemAsterisk\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\SystemAsterisk\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\SystemExclamation\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\SystemExclamation\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\SystemHand\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\SystemHand\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\SystemNotification\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\SystemNotification\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\.Default\WindowsUAC\.Current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\.Default\WindowsUAC\.Current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\DisNumbersSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\DisNumbersSound\.current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubOffSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubOffSound\.current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubOnSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubOnSound\.current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubSleepSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\HubSleepSound\.current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\MisrecoSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\MisrecoSound\.current' /f
+        Reg.exe delete 'HKCU\AppEvents\Schemes\Apps\sapisvr\PanelSound\.current' /f
+        Reg.exe add 'HKCU\AppEvents\Schemes\Apps\sapisvr\PanelSound\.current' /f
+        Reg.exe add 'HKCU\Control Panel\Cursors' /v 'ContactVisualization' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKCU\Control Panel\Cursors' /v 'GestureVisualization' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKCU\Control Panel\Cursors' /v 'Scheme Source' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKCU\Control Panel\Cursors' /ve /t REG_SZ /d ' ' /f
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'AppStarting' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'Arrow' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'Crosshair' -Force -ErrorAction SilentlyContinue
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'Hand' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'IBeam' -Force -ErrorAction SilentlyContinue
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'No' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'NWPen' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'SizeAll' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'SizeNESW' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'SizeNS' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'SizeNWSE' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'SizeWE' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'UpArrow' -Force
+        Clear-ItemProperty -Path 'registry::HKCU\Control Panel\Cursors' -Name 'Wait' -Force
     } elseif ($progress -le 20) {
         $statusMessage = $updateMessages[4]
         Start-Sleep -Milliseconds 20
@@ -354,7 +428,8 @@ for ($progress = 0; $progress -le 100; $progress++) {
         Start-Sleep -Milliseconds 200
         # Disabling Search Highlights
         Reg.exe Add "HKCU\Software\Microsoft\Windows\CurrentVersion\SearchSettings" /v "IsDynamicSearchBoxEnabled" /t REG_DWORD /d 0 /f 
-        Reg.exe Add "HKCU\Software\Microsoft\Windows\CurrentVersion\Feeds\DSB" /v "ShowDynamicContent" /t REG_DWORD /d 0 /f 
+        Reg.exe Add "HKCU\Software\Microsoft\Windows\CurrentVersion\Feeds\DSB" /v "ShowDynamicContent" /t REG_DWORD /d 0 /f
+	Reg.exe add 'HKCR\Microsoft.PowerShellScript.1\Shell\Open\Command' /ve /t REG_SZ /d "C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -noLogo -executionpolicy bypass -file `"`"%1`"`"" /f
     } elseif ($progress -le 80) {
         $statusMessage = $updateMessages[19]
         Start-Sleep -Milliseconds 200
@@ -455,10 +530,35 @@ public class DPI {
         Reg.exe Add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\FlipAhead" /v "FPEnabled" /t REG_DWORD /d "0" /f  
         Reg.exe Add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\User\Default\SearchScopes" /v "ShowSearchSuggestionsGlobal" /t REG_DWORD /d "0" /f  
         Reg.exe Add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\Privacy" /v "EnableEncryptedMediaExtensions" /t REG_DWORD /d "0" /f  
-        Reg.exe Add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\ServiceUI\ShowSearchHistory" /d "0" /f  
+        Reg.exe Add "HKCU\Software\Classes\Local Settings\Software\Microsoft\Windows\CurrentVersion\AppContainer\Storage\microsoft.microsoftedge_8wekyb3d8bbwe\MicrosoftEdge\ServiceUI\ShowSearchHistory" /d "0" /f 
+	
+	Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\DataCollection' /v 'AllowTelemetry' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection' /v 'AllowTelemetry' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection' /v 'MaxTelemetryAllowed' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKLM\SYSTEM\CurrentControlSet\Services\DiagTrack' /v 'Start' /t REG_DWORD /d '4' /f
+        Reg.exe add 'HKLM\System\ControlSet001\Services\dmwappushservice' /v 'Start' /t REG_DWORD /d '4' /f
+        Reg.exe add 'HKLM\System\ControlSet001\Control\WMI\Autologger\AutoLogger-Diagtrack-Listener' /v 'Start' /t REG_DWORD /d '0' /f
+        Reg.exe add 'HKLM\Software\Policies\Microsoft\Biometrics' /v 'Enabled' /t REG_DWORD /d '0' /f
+  
+ 
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser' -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\Application Experience\ProgramDataUpdater' -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\Autochk\Proxy' -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\Customer Experience Improvement Program\Consolidator' -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\Customer Experience Improvement Program\UsbCeip' -ErrorAction SilentlyContinue
+        Disable-ScheduledTask -TaskName 'Microsoft\Windows\DiskDiagnostic\Microsoft-Windows-DiskDiagnosticDataCollector' -ErrorAction SilentlyContinue
+
+        Write-Host 'Defering Optional Updates for 30 days(MAX)'
+        Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'SetAllowOptionalContent' /t REG_DWORD /d '0' /f >$null
+        Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferFeatureUpdates' /t REG_DWORD /d '1' /f >$null
+        Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferFeatureUpdatesPeriodInDays' /t REG_DWORD /d '365' /f >$null
+        Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferQualityUpdates' /t REG_DWORD /d '1' /f >$null
+        Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferQualityUpdatesPeriodInDays' /t REG_DWORD /d '30' /f >$null
+        gpupdate /force
+    }
     } elseif ($progress -le 94) {
         $statusMessage = $updateMessages[23]
-        Start-Sleep -Milliseconds 200
+        Start-Sleep -Milliseconds 250
         # Optimizing browser background activity
         Reg.exe Add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "StartupBoostEnabled" /t REG_DWORD /d "0" /f  
         Reg.exe Add "HKLM\SOFTWARE\Policies\Microsoft\Edge" /v "BackgroundModeEnabled" /t REG_DWORD /d "0" /f  
