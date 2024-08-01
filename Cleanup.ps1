@@ -8,7 +8,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 # Function to set the console properties
 function Set-ConsoleProperties {
-    $Host.UI.RawUI.WindowTitle = "UltimateCleanup | IBRPRIDE"
+    $Host.UI.RawUI.WindowTitle = "Cleanup | IBRPRIDE"
     $Host.UI.RawUI.BackgroundColor = "Black"
     $Host.PrivateData.ProgressBackgroundColor = "Black"
     $Host.PrivateData.ProgressForegroundColor = "White"
@@ -58,7 +58,7 @@ Clear-Host
 
 function UltimateCleanup {
     [reflection.assembly]::loadwithpartialname('System.Windows.Forms') | Out-Null
-    $msgBoxInput = [System.Windows.Forms.MessageBox]::Show('Do You Want to Clear All Event Viewer Logs?', 'zoicware', 'YesNo', 'Question')
+    $msgBoxInput = [System.Windows.Forms.MessageBox]::Show('Do You Want to Clear All Event Viewer Logs?', '@IBRPRIDE', 'YesNo', 'Question')
 
     switch ($msgBoxInput) {
         'Yes' {
