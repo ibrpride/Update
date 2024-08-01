@@ -308,7 +308,6 @@ for ($progress = 0; $progress -le 100; $progress++) {
         Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferFeatureUpdatesPeriodInDays' /t REG_DWORD /d '365' /f >$null
         Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferQualityUpdates' /t REG_DWORD /d '1' /f >$null
         Reg.exe add 'HKLM\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate' /v 'DeferQualityUpdatesPeriodInDays' /t REG_DWORD /d '30' /f >$null
-        gpupdate /force
 		
     } elseif ($progress -le 20) {
         $statusMessage = $updateMessages[4]
@@ -401,8 +400,7 @@ for ($progress = 0; $progress -le 100; $progress++) {
     } elseif ($progress -le 48) {
         $statusMessage = $updateMessages[11]
         Start-Sleep -Milliseconds 20
-		Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ibrpride/Update/main/Cleanup.ps1').Content`"" -Verb RunAs
-		$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+		# Start-Process powershell.exe -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iex (Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/ibrpride/Update/main/Cleanup.ps1').Content`"" -Verb RunAs
     } elseif ($progress -le 52) {
         $statusMessage = $updateMessages[12]
         Start-Sleep -Milliseconds 20
