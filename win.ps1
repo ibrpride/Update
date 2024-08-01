@@ -8,7 +8,7 @@ if (-NOT ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdenti
 
 # Function to set the console properties
 function Set-ConsoleProperties {
-    $Host.UI.RawUI.WindowTitle = "Summary Update | IBRPRIDE"
+    $Host.UI.RawUI.WindowTitle = "Summary Update v0.1 | @IBR HUB"
     $Host.UI.RawUI.BackgroundColor = "Black"
     $Host.PrivateData.ProgressBackgroundColor = "Black"
     $Host.PrivateData.ProgressForegroundColor = "White"
